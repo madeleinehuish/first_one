@@ -1,8 +1,8 @@
 function determineDaysOfMonth(month) {
-    if (month === "January" || month === "March" || month === "May" || month = "July" || month === "August" || month === "October" || month === "December") {
+    if (month === "January" || "March" || "May" || "July" || "August" || "October" || "December") {
         var days = 31;
         return days;
-    } else if (month === "April" || month === "June" || month === "September" || month === "November") {
+    } else if (month === "April" || "June" || "September" || "November") {
         var days = 30;
         return days;
     } else  {
@@ -17,6 +17,6 @@ function printDaysOfMonth(days, month) {
     }
 }
 
-determineDaysOfMonth("February");
+var days = determineDaysOfMonth("February");
 var month = "February";
 printDaysOfMonth(days, month);
