@@ -40,9 +40,18 @@ It'll take a few steps to solve this cipher. Have fun!
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
 function caesarShiftInt(integer) {
-  // YOUR CODE HERE
+  if (integer < 97){
+    return 'Error: integer too low';
+  } else if (integer > 122){
+    return 'Error: integer too high';
+  } else if ((integer + 13) > 122){
+    var overInteger = ((integer + 13)-122);
+    var newInteger = 97 + overInteger;
+    return 
+  }
 }
 
+// var chr = String.fromCharCode(97 + n); // where n is 0, 1, 2 ...
 // Define a function named caesarShiftChar that takes a one argument
 //    char (string of one character)
 //
