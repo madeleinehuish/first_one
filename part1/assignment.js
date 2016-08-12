@@ -504,7 +504,7 @@ function superPicky(value){
 //    Return the correct tax rate as a string using the table from http://www.efile.com/tax-service/tax-calculator/tax-brackets/
 
 function calculateTaxRate(salary, status){
-  if ((status !== 'single') || (status !== 'joint') ) {
+  if ((status !== 'single') && (status !== 'joint') ) {
     return 'Better call an accountant';
   }
   if (salary > 74900){
