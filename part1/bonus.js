@@ -68,6 +68,18 @@ function caesarShiftInt(integer) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode
 
+function caesarShiftChar(char) {
+    var newChar;
+      if ((char.charCodeAt(0) < 65) || ((char.charCodeAt(0) > 90) && (char.charCodeAt(0) <97))  || (char.charCodeAt(0)) > 122) {
+        return char;
+    } else {
+      newChar = char.toLowerCase();
+      n = newChar.charCodeAt(0);
+      var y = caesarShiftInt(n);
+      var chr = String.fromCharCode(y);
+      return chr;
+    }
+}
 
 
 
