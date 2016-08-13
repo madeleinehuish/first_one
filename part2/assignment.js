@@ -4,13 +4,11 @@
 // Return the sum of all of the numbers in the array. For example, given
 // [1, 2, 3, 4], then return 10. If the array is empty, return 0.
 function sum(arr) {
-  // var sum = 0;
-  //
-  // for (var i = 0; i < arr.length; i++) {
-  //   sum += arr[i];
-  // }
-  //
-  // return sum;
+  var sum = 0;
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
 }
 
 // Define a function named product that takes in one argument.
@@ -19,7 +17,11 @@ function sum(arr) {
 // Return the product of all of the numbers in the array. For example, given
 // [1, 2, 3, 4], then return 24. If the array is empty, return 1.
 function product(arr) {
-  // YOUR CODE HERE
+  var product = 1;
+  for (var i = 0; i < arr.length; i++) {
+    product = product * arr[i];
+  }
+  return product;
 }
 
 // Define a function named concatenate that takes in one argument.
@@ -28,8 +30,13 @@ function product(arr) {
 // Return the concatenation of all the strings in the array. For example, given
 // ['hello', 'my', 'name', 'is', 'ken'], then return 'hellomynameisken'. If the
 // array is empty, return ''.
-function concatenate(arr) {
 
+function concatenate(arr) {
+  var sum = '';
+  for (var i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
 }
 
 // Define a function named repeat that takes in two arguments.
@@ -39,7 +46,11 @@ function concatenate(arr) {
 // Return a new string containing times copies of the input str. For example,
 // given 'hi' and 4, then return 'hihihihi'.
 function repeat(str, times) {
-
+  var originalStr = str;
+  for (var i = 1; i < times; i++) {
+    str = str + originalStr;
+  }
+  return str;
 }
 
 // Define a function named filterPassingGrades that takes in one argument.
@@ -47,7 +58,16 @@ function repeat(str, times) {
 //
 // Return a new array with any grade less than 70 filtered out. For example,
 // given [88, 67, 70, 92, 53], then return [88, 70, 92].
-
+function filterPassingGrades(grades){
+  var newArray = grades;
+  for (i = 0; i < grades.length; i++){
+    if (grades[i] < 70){
+      newArray = newArray.slice(i);
+      i = i - 1;
+    }
+  }
+  return newArray;
+}
 
 
 
