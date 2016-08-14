@@ -123,7 +123,9 @@ function max(arr){
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/min
 
-
+function min(arr){
+    return Math.min.apply(null, arr);
+  }
 
 
 // Define a function named mean that takes in one argument.
@@ -132,6 +134,18 @@ function max(arr){
 // Return the mean (i.e. average) of all of the numbers in the array. For
 // example, given [1, 2, 6], then return 3. If the array is empty, return null.
 
+function mean(arr){
+  var total = 0;
+  if (arr.length === 0){
+    return null;
+  } else {
+  for (i = 0; i < arr.length; i++){
+    total = total + arr[i];
+    }
+  }
+  return (total/arr.length);
+
+}
 
 
 
@@ -147,6 +161,17 @@ function max(arr){
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
 
+function median(arr){
+  if (arr.length === 0){
+    return null;
+  } else if (arr.length % 2 === 0){
+      return ((arr[(arr.length)/2]+arr[((arr.length)/2) - 1])/2);
+    } else {
+      return (arr[Math.floor(arr.length/2)])
+    }
+  }
+
+
 
 
 
@@ -155,7 +180,13 @@ function max(arr){
 //     str (string)
 //
 // Return true if that string exists in the array, otherwise false.
-
+function contains(arr, str){
+  for (i = 0; i < arr.length; i++){
+    if (arr[i] === str){
+      return true;
+    }
+  } return false;
+}
 
 
 
