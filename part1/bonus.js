@@ -90,7 +90,13 @@ function caesarShiftChar(char) {
 // 'Hello, there!', then return 'uryyb, gurer!'.
 //
 // HINT: You'll need a loop for this.
-
+function encodeMessage(message){
+  var codedMessage = [];
+  for (i = 0; i < message.length; i++){
+    codedMessage[i] = caesarShiftChar(message[i]);
+  }
+  return codedMessage.join('');
+}
 
 
 
@@ -101,3 +107,10 @@ function caesarShiftChar(char) {
 // 'uryyb, gurer!', then return 'Hello, there!'.
 //
 // HINT: Is there a way to use the encodeMessage() function?
+function decodeMessage(message){
+  var decodedMessage = [];
+  for (i = 0; i < message.length; i++){
+    decodedMessage[i] = caesarShiftChar(message[i]);
+  }
+  return decodedMessage.join('');
+}
