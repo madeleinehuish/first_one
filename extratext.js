@@ -48,7 +48,7 @@ function combine(obj1, obj2){
     var i = 0;
     var objectArray = [];
     for (prop in obj)
-      objectArray[i] = obj.prop;
+      objectArray[i] = obj[prop];
       i = i + 1;
       return objectArray;
   }
@@ -58,5 +58,40 @@ function combine(obj1, obj2){
     var objectArray = [];
     for (prop in obj)
       console.log(obj.prop);
-      
+
   }
+  function toPairs(obj){
+    var newArray = [];
+    var i = 0;
+    for (var prop in obj) {
+      for
+      (i = 0, i < Object.keys(obj).length; i++)
+      {newArray[i] = [obj[prop], prop];} //end for i loop
+    } // end for in loop
+    return newArray;
+
+  } // end function
+
+
+// ROSS function
+  function replace(arr, start, to) {
+    var newArr = [];
+    for (var i = 0; i < arr.length; i++) {
+       console.log(arr[i]);
+        if (arr[i] === start) {
+          newArr = [].slice(arr[i], 1);
+        }
+    }
+ //console.log(newArr);
+}
+
+//Mine
+function replace (arr, from, to){
+  for (i = 0; i < arr.length; i ++){
+    if (arr[i] === from){
+      arr[i] = to;
+    }
+
+  }
+return arr;
+}
