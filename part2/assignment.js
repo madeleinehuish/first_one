@@ -79,9 +79,15 @@ function filterPassingGrades(grades){
 //
 // Return a new array of numbers where all from elements are replaced with to.
 // For example, given [1, 3, 2, 1, 3], 1, and 4, then return [4, 3, 2, 4, 3].
-// function replace (arr, from, to){
+function replace (arr, from, to){
+  for (i = 0; i < arr.length; i ++){
+    if (arr[i] === from){
+      arr[i] = to;
+    }
 
-// }
+  }
+return arr;
+}
 
 
 
@@ -95,13 +101,17 @@ function filterPassingGrades(grades){
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
-// function flatten(arr){
-  // for (i = 0; i < 2; i ++){
-  // var newArray = arr[0].concat(arr[1]);
+function flatten(arr){
+  var newArray = [];
+  for (i = 0; i < arr.length; i ++){
+
+      var newArray = newArray.concat(arr[i])
+
+    }
+    return newArray;
+  }
 
 
-  // return newArray;
-// }
 
 
 // Define a function named max that takes in one argument.
@@ -218,7 +228,10 @@ function distance(point1, point2) {
 
 function combine(obj1, obj2){
 
+
 }
+
+
 
 // Define a function called invert that takes in one argument.
 //    obj (object)
