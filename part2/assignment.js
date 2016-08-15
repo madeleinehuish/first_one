@@ -105,7 +105,7 @@ function flatten(arr){
   var newArray = [];
   for (i = 0; i < arr.length; i ++){
 
-      var newArray = newArray.concat(arr[i])
+      var newArray = newArray.concat(arr[i]);
 
     }
     return newArray;
@@ -225,12 +225,10 @@ function distance(point1, point2) {
 // If there's a key in more than one object,
 // the latest object to have the key will determine the value. For example,
 // given {c: 3} and {c: 4}, then return {c: 4}.
-
 function combine(obj1, obj2){
-
-
+  var newObject = Object.assign(obj1, obj2);
+  return newObject;
 }
-
 
 
 // Define a function called invert that takes in one argument.
@@ -257,6 +255,8 @@ function invert(obj) {
 //
 // Return an array of the values of the object. For example, given
 // { a: 1, b: 2, c: 3 }, then return [1, 2, 3].
+
+
 
 
 
