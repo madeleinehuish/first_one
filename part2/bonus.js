@@ -31,7 +31,15 @@ function bigSum() {
 //
 // and the key 'name', then return ['moe', 'larry', 'curly'].
 
+function pluck(arr, key){
+  var objectArray = [];
+  for (i = 0, i < arr.length; i++){
+  for (key in arr[0])
+    objectArray[i].push[arr.key[0]];
 
+}
+  return objectArray;
+}
 
 
 // Define a function named pick that takes in two arguments.
