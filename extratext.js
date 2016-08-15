@@ -95,3 +95,16 @@ function replace (arr, from, to){
   }
 return arr;
 }
+
+function bigSum(1,2,3,4) {
+  var sum = 0;
+  var args = Array.prototype.slice.call(arguments);
+  return args;
+  if (arguments.length < 1){
+    return 0;
+  } else {
+  for (i=0; i < args.length; i++){
+    sum = sum + args[i];
+  }
+}return sum;
+}

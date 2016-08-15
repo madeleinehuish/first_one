@@ -74,9 +74,7 @@ function areaOfCircle(radius){
 // Return the area of a circular ring using these arguments. Use Google to find
 // the formula.
 function areaOfRing(outerRadius, innerRadius){
-  var outerDiameter = 2*outerRadius;
-  var innerDiameter = 2*innerRadius;
-  return (Math.PI/4)*(Math.pow(outerDiameter,2)-Math.pow(innerDiameter,2));
+  return areaOfCircle(outerRadius) - areaOfCircle(innerRadius);
 }
 
 
