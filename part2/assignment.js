@@ -256,7 +256,15 @@ function invert(obj) {
 // Return an array of the values of the object. For example, given
 // { a: 1, b: 2, c: 3 }, then return [1, 2, 3].
 
+function values(obj){
 
+  var objectArray = [];
+  for (var prop in obj){
+    objectArray.push(obj[prop]);
+
+  }
+  return objectArray;
+}
 
 
 
