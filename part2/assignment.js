@@ -275,7 +275,15 @@ function values(obj){
 // Return a new array where each element is key-value pair array of the
 // argument. For example, given { a: 1, b: 2 }, then return
 // [['a', 1], ['b', 2]].
+function toPairs(obj){
 
+  var objectArray = [];
+  for (var prop in obj){
+    objectArray.push([prop, obj[prop]]);
+
+  }
+  return objectArray;
+}
 
 
 
