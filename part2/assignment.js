@@ -293,3 +293,12 @@ function toPairs(obj){
 // Return a new object where each key-value pair is from an element in the
 // argument. For example, given [['a', 1], ['b', 2]], then return
 // { a: 1, b: 2 }.
+function fromPairs(arr){
+  var obj ={};
+  for (i = 0; i < arr.length; i++){
+    obj[arr[i][0]] = arr[i][1];
+
+
+  }
+  return obj;
+}
