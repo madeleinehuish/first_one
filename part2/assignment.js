@@ -171,10 +171,6 @@ function median(arr){
     }
   }
 
-
-
-
-
 // Define a function named contains that takes in two arguments.
 //     arr (array of strings)
 //     str (string)
@@ -203,8 +199,12 @@ function contains(arr, str){
 //
 // Tip: Use Google to learn more about calculating the distance.
 
-
-
+function distance(point1, point2) {
+  var a = point1.x - point2.x;
+  var b = point1.y - point2.y;
+  var c = Math.sqrt( a*a + b*b);
+  return c;
+}
 
 // Define a function named combine that takes in two arguments.
 //    obj1 (object)
@@ -216,7 +216,9 @@ function contains(arr, str){
 // the latest object to have the key will determine the value. For example,
 // given {c: 3} and {c: 4}, then return {c: 4}.
 
+function combine(obj1, obj2){
 
+}
 
 // Define a function called invert that takes in one argument.
 //    obj (object)
@@ -224,8 +226,18 @@ function contains(arr, str){
 // Return a new object where the keys and values of the argument are inverted.
 // For example, given { a: 1, b: 2 }, then return { '1': 'a', '2': 'b' }.
 
+function invert(obj) {
 
+  var new_obj = {};
 
+  for (var prop in obj) {
+    if(obj.hasOwnProperty(prop)) {
+      new_obj[obj[prop]] = prop;
+    }
+  }
+
+  return new_obj;
+};
 
 // Define a function named values that takes in one argument.
 //    obj (object)
